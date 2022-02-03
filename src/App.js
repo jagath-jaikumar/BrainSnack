@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import CssBaseline from "@mui/material/CssBaseline";
+import Grid from "@mui/material/Grid";
+import HeaderBar from "./components/HeaderBar";
+import GameBoard from "./components/GameBoard";
+import Stack from "@mui/material/Stack";
+import Box from "@mui/material/Box";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <CssBaseline />
+
+      <Grid
+        container
+        align="center"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Box
+          sx={{
+            width: 300,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <Stack spacing={2}>
+            <HeaderBar />
+            <GameBoard />
+          </Stack>
+        </Box>
+      </Grid>
+    </>
   );
 }
 
