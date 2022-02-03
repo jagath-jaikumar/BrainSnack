@@ -26,6 +26,7 @@ function App() {
             <HeaderBar />
             <GameBoard />
           </Stack>
+          <br />
         </Box>
       </Grid>
     </>
